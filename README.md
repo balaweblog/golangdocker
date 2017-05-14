@@ -2,7 +2,7 @@
 
 <b>Basic golang applications in docker environment </b>
 
-1. Build the docker image 
+1. Build the docker image <br>
   docker build -t "golangimage" .
 2. run the container with the image just created
   docker run --name=golangimagecontainer golangimage
