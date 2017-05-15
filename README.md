@@ -34,3 +34,22 @@
   docker logs golangimagecontainer <br>
   
 
+<b>golang application docker compose up </b>
+
+Your working directory should be like $ mkdir $GOPATH/src/golangdocker <br>
+Inside put your files docker-compose.yml and main.go <br>
+
+myapp -> service name <br>
+image -> we use the already created golang image <br>
+volume -> Attach the volumes and working directory. <br>
+command -> the initial command to run  <br>
+links - relative links like connecting redis or sql <br>
+environment - environment variable <br>
+redis image - image to external <br>
+
+
+1. $ docker-compose  <br>
+or 
+2. docker-compose run myapp go run main.go <br>
+myapp - service name <br>
+
