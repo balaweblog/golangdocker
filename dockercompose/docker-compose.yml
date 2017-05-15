@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  myapp:
+    image: golangimage
+    volumes:
+      - .:/src/golangdocker
+    working_dir: /src/golangdocker
+    command: go run main.go
+    links:
+      - redis
+    environment:
+      REDIS_URL: redis:6379
+
+  redis:
+    image: redis:alpine
